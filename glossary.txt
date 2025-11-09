@@ -1,0 +1,49 @@
+# 📘 Glossary – Germany Renewable Energy Dataset (OPSD)
+
+This glossary explains the key columns from the `time_series_60min_singleindex.csv` file used in the project.
+
+
+utc_timestamp: The timestamp in UTC (Coordinated Universal Time)
+cet_cest_timestamp: The timestamp converted to Central European Time (CET/CEST)
+DE_load_actual_entsoe_transparency: The actual electricity demand in Germany (MW) from ENTSO-E Transparency Platform.
+DE_load_forecast_entsoe_transparency: The forecasted electricity demand in Germany (MW). 
+DE_solar_capacity: Installed solar capacity in MW (max theoretical).
+DE_solar_generation_actual: Actual solar generation in MW at that hour.
+DE_solar_profile: Relative generation fraction (generation / capacity).
+DE_wind_capacity: Installed wind capacity (onshore + offshore combined).
+DE_wind_generation_actual: Actual wind generation (onshore + offshore combined).
+DE_wind_profile: Relative generation fraction (generation / capacity).
+DE_wind_offshore_capacity / DE_wind_onshore_capacity: Installed capacity per type.
+DE_wind_offshore_generation_actual / DE_wind_onshore_generation_actual: Actual generation per type.
+DE_wind_offshore_profile / DE_wind_onshore_profile: Fraction of capacity used.
+
+DE_50hertz_…: Data for 50Hertz TSO region
+DE_amprion_…: Data for Amprion region
+DE_tennet_…: Data for TenneT region
+DE_transnetbw_…: Data for TransnetBW region
+
+Columns under each include:
+
+load_actual_entsoe_transparency → actual demand in that region
+
+load_forecast_entsoe_transparency → forecast demand
+
+solar_generation_actual → solar generation in the TSO area
+
+wind_generation_actual → wind (sometimes split onshore/offshore)
+
+---------------------------------------------------------------
+DE_LU_load_actual_entsoe_transparency
+
+DE_LU_load_forecast_entsoe_transparency
+
+DE_LU_price_day_ahead
+
+…and generation columns
+
+These are cross-border flows with Luxembourg (some data includes neighboring countries).
+For a Germany-only renewable share, I ignored these.
+
+**Note:**  
+All values are typically reported in **megawatts (MW)** and recorded at **hourly intervals**.  
+Time columns are included both in **UTC** and **local German time** for convenience.
